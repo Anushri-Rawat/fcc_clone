@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   const {
-    state: { user, alert },
+    state: { alert },
     dispatch,
   } = useContext(UserContext);
 

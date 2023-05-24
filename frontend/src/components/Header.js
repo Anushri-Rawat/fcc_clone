@@ -19,10 +19,8 @@ const Header = () => {
           <input type="text" placeholder="Search 8000+ tutorials"></input>
         </div>
       </div>
-      <div className="nav-middle">
-        <a href="/">
-          <img src={logo} alt="logo" />
-        </a>
+      <div className="nav-middle" onClick={() => navigate("/")}>
+        <img src={logo} alt="logo" />
       </div>
       <div className="nav-right d-flex">
         <div className="dropdown">
@@ -36,11 +34,27 @@ const Header = () => {
             Menu
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li className="dropdown-item" onClick={() => logoutFunc(dispatch)}>
+            <li
+              className="dropdown-item"
+              onClick={() => logoutFunc(dispatch)}
+              style={{ cursor: "pointer" }}
+            >
               Logout
             </li>
-            <li className="dropdown-item">Profile</li>
-            <li className="dropdown-item" onClick={() => navigate("/learn")}>
+            <li
+              className="dropdown-item"
+              onClick={() => {
+                navigate("/");
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              Home
+            </li>
+            <li
+              className="dropdown-item"
+              onClick={() => navigate("/learn")}
+              style={{ cursor: "pointer" }}
+            >
               Curriculum
             </li>
           </ul>

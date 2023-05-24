@@ -20,7 +20,6 @@ const SignInpage = () => {
     e.preventDefault();
     if (isRegister) register({ name, email, password }, dispatch);
     else login({ email, password }, dispatch);
-    navigate("/learn");
   };
 
   const googleSuccess = (res) => {
@@ -34,7 +33,6 @@ const SignInpage = () => {
         "fccUser",
         JSON.stringify({ ...decodedUser, token: res.credential })
       );
-      navigate("/learn");
     } catch (error) {
       console.log(error);
     }
@@ -42,6 +40,10 @@ const SignInpage = () => {
 
   const googleError = (error) =>
     console.log("Google Sign In was unsuccessful. Try again later");
+
+  useEffect(() => {
+    if (user) navigate("/learn");
+  }, [user]);
 
   return (
     <div
@@ -56,27 +58,21 @@ const SignInpage = () => {
             </h1>
           </div>
           <div className="modal-body">
-            <GoogleOAuthProvider
-              clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-              onScriptLoadError={googleSuccess}
-              onScriptLoadSuccess={googleError}
-            >
-              <GoogleLogin
-                render={(renderProps) => (
-                  <button
-                    color="primary"
-                    fullWidth
-                    onClick={renderProps.onClick}
-                    disabled={renderProps.disabled}
-                    variant="contained"
-                  >
-                    Google Login
-                  </button>
-                )}
-                onSuccess={googleSuccess}
-                onFailure={googleError}
-              />
-            </GoogleOAuthProvider>
+            <GoogleLogin
+              render={(renderProps) => (
+                <button
+                  color="primary"
+                  fullWidth
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                  variant="contained"
+                >
+                  Google Login
+                </button>
+              )}
+              onSuccess={googleSuccess}
+              onFailure={googleError}
+            />
             <div className="separator">
               <span>or</span>
             </div>

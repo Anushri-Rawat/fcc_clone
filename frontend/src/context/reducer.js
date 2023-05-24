@@ -13,7 +13,7 @@ const reducer = (state, action) => {
     case "SET_USER":
       return { ...state, user: action.payload };
     case "GET_ALL_COURSES":
-      return { ...state, course: action.payload };
+      return { ...state, courses: action.payload };
     case "UPDATE_ALERT":
       return { ...state, alert: action.payload };
     case "USER_LOGOUT":

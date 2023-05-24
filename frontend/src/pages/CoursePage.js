@@ -14,8 +14,8 @@ const CoursePage = () => {
 
   useEffect(() => {
     if (!user) navigate("/");
-    getAllCourses(dispatch);
-  }, [user]);
+    if (!courses) getAllCourses(dispatch);
+  }, [user, dispatch, courses]);
 
   return (
     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
