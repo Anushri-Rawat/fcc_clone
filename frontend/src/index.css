@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto Mono, monospace !important;
+  background: #f5f6f7 !important;
+  color: #1b1b32 !important;
+}
+
+.btn {
+  background-color: #feac32 !important;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border-color: #feac32 !important;
+  border-width: 3px !important;
+  color: #0a0a23 !important;
+  border-radius: 0 !important;
+}
+h1,
+h2 {
+  font-weight: 700 !important;
+  margin: 0.6rem 0 !important;
+}
+/*-------------header---------*/
+nav {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #0a0a23;
+  justify-content: space-between;
+  padding: 7px 15px;
+  font-size: 18px;
+  width: 100%;
+}
+.nav-middle img {
+  display: block;
+  height: 24px;
+  margin: 7px 0;
+  width: auto;
+}
+.menu-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  cursor: pointer !important;
+  padding: 2px 14px;
+  align-items: center;
+  min-height: 100%;
+}
+.nav-left {
+  max-width: 400px;
+  width: 100%;
+  flex: 1 0 33%;
+}
+.search-bar > input {
+  width: 100%;
+  background-color: #3b3b47;
+  color: #fff;
+  border: none;
+  height: 26px;
+  margin-top: 6px;
+  padding: 0 10px;
+}
+/*-----Homepage----*/
+.big-heading {
+  font-weight: 700 !important;
+  line-height: 1.1;
+  margin-bottom: 40px !important;
+  font-size: 2.5rem !important;
+  overflow-wrap: break-word;
+}
+.homepage p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.6rem 0;
+  line-height: 1.5rem;
+}
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.logo i {
+  color: #3b3b4f;
+}
+.big-btn {
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 500px;
+  padding: 5px;
+  white-space: normal;
+  width: 100%;
+  cursor: pointer !important;
+  font-size: 1.5rem !important;
+  margin-top: 2rem;
+}
+ul {
+  color: #1b1b32;
+  list-style: none;
+  padding: 0 !important;
+}
+/*-------------intropage-------*/
+.quote {
+  border: none;
+  font-size: 1.3rem;
+  padding: 12.5px 25px;
+  margin: 0 0 25px;
+}
+.course-item {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+  min-height: 65px;
+  border: 2px solid #1b1b32;
+  background-color: #d0d0d5 !important;
+}
+.course-item a {
+  color: #1b1b32 !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  padding: 8px 16px !important;
+  font-size: 23px !important;
+  line-height: 1.3333333 !important;
+}
+/*------------Signin page----------*/
+.separator {
+  text-align: center;
+  border-bottom: 3px solid #3b3b4f;
+  line-height: 0.1em;
+  margin: 1.2rem auto;
+  width: 60%;
+}
+.separator > span {
+  background: #f5f6f7;
+  padding: 0 10px;
+}
+button.course-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-size: 22px;
+}
+.form-group {
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+.form-control {
+  min-height: 65px;
+  padding: 10px 16px;
+  font-size: 22px !important;
+  border: 2px solid #1b1b32 !important;
+  border-radius: 0 !important;
+  margin-bottom: 10px;
+}
+
+/*-------------course page-----*/
+.link-btn {
+  background-color: #d0d0d5 !important;
+  border-radius: 0;
+  border: 3px solid #1b1b32 !important;
+  color: #1b1b32;
+  text-decoration: none;
+  display: flex;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+  padding: 6px 12px;
+  cursoe: pointer;
+}
+.blockquote {
+  border: none;
+  font-size: 1.3rem;
+  padding: 12.5px 25px;
+  margin: 0 0 25px;
+}
+.quote-author {
+  color: #1b1b32;
+  font-style: normal;
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857143;
+  text-align: center;
+  display: block;
+}
+.blockquote-footer {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 425px) {
+  nav {
+    padding: 7px 0 !important;
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 14px !important;
+    margin: 0 5px;
+  }
+  .big-heading {
+    font-size: 1.5rem !important;
+  }
+}
